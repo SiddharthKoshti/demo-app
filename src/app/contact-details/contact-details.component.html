@@ -1,0 +1,52 @@
+<div class="container">
+    <h5>&nbsp;Contact Details</h5>
+    <hr style="border:1px solid orange;">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="pull-left">
+                <label class="font-weight-bold" style="align: left">Contact Details</label>
+            </div>
+        </div>
+      
+        <div class="col-sm-6">
+            <input type="text" [(ngModel)]="searchParam" (change)="searchData($event)" placeholder="search here">&nbsp;
+            <span class="fa fa-filter"></span> &nbsp;
+            <button type="submit" class="btn btn-info">Feedback</button>&nbsp;
+            <button type="button" class="btn btn-primary" [routerLink]="['']">Back</button>
+
+        </div>
+    </div>
+    <div class="row" style="padding: 20px;">
+        <div style="width: 250px !important;padding: 5px;" *ngFor="let contact of assignDataToCard ; let i = index">
+            <div class="card">
+                <div class="card-header">
+                    <b> {{contact.name}}</b>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="fa fa-user" style="color: blue;"> &nbsp;&nbsp;</span>
+                        <span style="float: right; ">{{contact.jobTitle}}</span>
+                    </div>
+                    <div *ngIf="isIndexSelected == i">
+                        <span class="fa fa-unlock" style="color: blue;"> &nbsp;&nbsp;</span>
+                        <span style="float: right;"> {{contact.contactNo}}</span>
+                    </div>
+                    <div *ngIf="isIndexSelected == i">
+                        <span class="fa fa-envelope"> &nbsp;&nbsp;</span>
+                        <span style="float: right;">{{contact.email}}</span>
+                    </div>
+                    <div *ngIf="isIndexSelected != i">
+                        <a (click)="onClickRevel(i)"><span class="fa fa-lock" style="float: left;"></span></a>
+                    </div>
+                    <div *ngIf="isIndexSelected != i">
+                        &nbsp;
+                    </div>
+                    <div *ngIf="isIndexSelected != i">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>

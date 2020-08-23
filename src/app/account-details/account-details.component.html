@@ -1,0 +1,120 @@
+<div class="container">
+    <h5>&nbsp;IG Account Details</h5>
+    <hr style="border:1px solid orange;">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="pull-left">
+                <label class="font-weight-bold" style="align: left">Account Details</label>
+            </div>
+        </div>
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-1">
+            <div class="pull-right">
+                <button type="submit" class="btn btn-success">Update</button>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="pull-right">
+                <button type="submit" class="btn btn-primary">Feedback</button>
+            </div>
+        </div>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="col-sm-6">
+                <label>Company Name</label>
+                <input type="text" class="form-control" name="companyName" id="companyName"
+                    [(ngModel)]="accountDetails.companyName">
+            </div>
+            <div class="col-sm-6">
+                <label>Primary Industry</label>
+                <input type="text" class="form-control" name="primaryIndustry" id="primaryIndustry"
+                    [(ngModel)]="accountDetails.primaryIndustry">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col-sm-6">
+                <label>Address</label>
+                <input type="text" class="form-control" name="address" id="address"
+                    [(ngModel)]="accountDetails.address">
+            </div>
+            <div class="col-sm-6">
+                <label>Revenue</label>
+                <input type="text" class="form-control" name="revenue" id="revenue"
+                    [(ngModel)]="accountDetails.revenue">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col-sm-6">
+                <label>Phone</label>
+                <input type="text" class="form-control" name="mobileNo" id="mobileNo"
+                    [(ngModel)]="accountDetails.mobileNo">
+            </div>
+            <div class="col-sm-6 col-md-offset-1">
+                <div class="form-group row">
+                  <label> &nbsp;&nbsp;&nbsp; Employee Size</label>
+                    <div class="col-sm-11"> 
+                  <input type="text" class="form-control" name="employeeSize" id="employeeSize"
+                        [(ngModel)]="accountDetails.employeeSize">
+                    </div>
+                    <br>
+                    <div class="col-sm-1" >
+                      <a [routerLink]="['/contactDetail']"style = "position"><span class="fa fa-edit"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-6">
+                <label>Website</label>
+                <input type="text" class="form-control" name="website" id="website"
+                    [(ngModel)]="accountDetails.website">
+            </div>
+            <div class="col-sm-6">
+                <label>SIC</label>
+                <input type="text" class="form-control" name="sic" id="sic" [(ngModel)]="accountDetails.sic">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col-sm-6">
+                <label>Ownership</label>
+                <input type="text" class="form-control" name="ownership" id="ownership"
+                    [(ngModel)]="accountDetails.ownership">
+            </div>
+            <div class="col-sm-6">
+                <label>NAICS</label>
+                <input type="text" class="form-control" name="naics" id="naics" [(ngModel)]="accountDetails.naics">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col-sm-6">
+                <label>Linkdn Url</label>
+                <input type="text" class="form-control" name="linkdnUrl" id="linkdnUrl"
+                    [(ngModel)]="accountDetails.linkdnUrl">
+            </div>
+            <div class="col-sm-6">
+                <label>Parent Company</label>
+                <input type="text" class="form-control" name="parentCompany" id="parentCompany"
+                    [(ngModel)]="accountDetails.parentCompany">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col-sm-6">
+                <label>All Industry</label>
+                <textarea type="text" class="form-control" name="allIndustry" id="allIndustry"
+                    [(ngModel)]="accountDetails.allIndustry"></textarea>
+            </div>
+            <div class="col-sm-6">
+                <label>All SIC</label>
+                <textarea type="text" class="form-control" name="allSic" id="allSic"
+                    [(ngModel)]="accountDetails.allSic"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
