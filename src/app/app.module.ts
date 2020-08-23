@@ -8,7 +8,6 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { contactRoute } from './account-details/account-details.route';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { RouterModule } from '@angular/router';
-import {CheckboxModule} from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
@@ -18,13 +17,9 @@ import {CheckboxModule} from 'primeng/checkbox';
   ],
   imports: [
     BrowserModule,
-    CheckboxModule,
     AppRoutingModule,FormsModule,RouterModule.forChild(contactRoute)
   ],schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
-  exports: [
-    CheckboxModule
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
